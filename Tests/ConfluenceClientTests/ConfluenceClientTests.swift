@@ -1,5 +1,5 @@
 import Testing
-@testable import swift_confluence_client
+@testable import ConfluenceClient
 
 @Test func example() async throws {
     // Write your test here and use APIs like `#expect(...)` to check expected conditions.
