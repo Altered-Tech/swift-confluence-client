@@ -9,14 +9,13 @@ import Foundation
 
 
 /** The status of the content. */
-public enum ContentStatus: String, Codable {
+public enum ContentStatus: String {
     case current = "current"
     case draft = "draft"
     case archived = "archived"
     case historical = "historical"
     case trashed = "trashed"
     case deleted = "deleted"
-    case any = "any"
     
     internal init(status: Components.Schemas.ContentStatus?) {
         switch status {
@@ -26,8 +25,25 @@ public enum ContentStatus: String, Codable {
         case .draft: self = .draft
         case .historical: self = .historical
         case .trashed: self = .trashed
-        case .none: self = .any
-        case .any: self = .any
+        default : self = .current
+        }
+    }
+    
+    internal func toQuery() -> Operations.getPageById.Input.Query.statusPayloadPayload {
+        switch self {
+            
+        case .current:
+                .current
+        case .draft:
+                .draft
+        case .archived:
+                .archived
+        case .historical:
+                .historical
+        case .trashed:
+                .trashed
+        case .deleted:
+                .deleted
         }
     }
 }
