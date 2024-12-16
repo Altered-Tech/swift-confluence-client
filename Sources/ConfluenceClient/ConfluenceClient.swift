@@ -23,7 +23,7 @@ public struct ConfluenceClient {
         self.init(underlyingClient: Client(serverURL: URL(string: url)!, transport: transport))
     }
     
-    public func pageBy(id: Int64, draft: Bool = false, status: [Operations.getPageById.Input.Query.statusPayloadPayload]? = [.current], version: Int? = nil) async throws -> Components.Schemas.PageSingle {
+    public func pageBy(id: Int64, draft: Bool = false, status: [Operations.getPageById.Input.Query.statusPayloadPayload]? = [.current], version: Int? = nil) async throws -> PageSingle {
         let query = Operations.getPageById.Input.Query(get_hyphen_draft: draft, status: status, version: version)
         
         let response = try await underlyingClient.getPageById(path: .init(id: id), query: query)
@@ -31,7 +31,7 @@ public struct ConfluenceClient {
         switch response {
             
         case .ok(let result):
-            return try result.body.json.value1
+            return PageSingle(client: try result.body.json.value1)
         case .badRequest(_):
             throw ConfluenceError.badRequest()
         case .unauthorized(_):
@@ -43,13 +43,13 @@ public struct ConfluenceClient {
         }
     }
     
-    public func labelsBy(id: Int64, prefix: Operations.getPageLabels.Input.Query.prefixPayload? = nil, sort: String? = nil, limit: Int32 = 25) async throws -> [Components.Schemas.Label]? {
+    public func labelsBy(id: Int64, prefix: Operations.getPageLabels.Input.Query.prefixPayload? = nil, sort: String? = nil, limit: Int32 = 25) async throws -> [Label]? {
         let response = try await underlyingClient.getPageLabels(path: .init(id: id), query: .init(prefix: prefix, sort: sort, limit: limit))
         
         switch response {
             
         case .ok(let result):
-            return try result.body.json.results
+            return try result.body.json.results?.map{ Label(client: $0) }
         case .badRequest(_):
             throw ConfluenceError.badRequest()
         case .unauthorized(_):
@@ -61,13 +61,13 @@ public struct ConfluenceClient {
         }
     }
     
-    public func childPages(id: Int64, sort: String? = nil, limit: Int32 = 25) async throws -> [Components.Schemas.ChildPage]? {
+    public func childPages(id: Int64, sort: String? = nil, limit: Int32 = 25) async throws -> [ChildPage]? {
         let response = try await underlyingClient.getChildPages(path: .init(id: id), query: .init(limit: limit, sort: sort))
         
         switch response {
             
         case .ok(let result):
-            return try result.body.json.results
+            return try result.body.json.results?.map{ ChildPage(client: $0) }
         case .badRequest(_):
             throw ConfluenceError.badRequest()
         case .unauthorized(_):
