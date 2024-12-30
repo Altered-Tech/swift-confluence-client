@@ -9,10 +9,10 @@ import Foundation
 
 
 
-public struct BlogPostBulk: Codable {
+public struct BlogPostBulk {
 
     /** ID of the blog post. */
-    public var _id: String?
+    public var id: String?
     public var status: BlogPostContentStatus?
     /** Title of the blog post. */
     public var title: String?
@@ -26,8 +26,8 @@ public struct BlogPostBulk: Codable {
     public var body: BodyBulk?
     public var links: AbstractPageLinks?
 
-    public init(_id: String? = nil, status: BlogPostContentStatus? = nil, title: String? = nil, spaceId: String? = nil, authorId: String? = nil, createdAt: Date? = nil, version: Version? = nil, body: BodyBulk? = nil, links: AbstractPageLinks? = nil) {
-        self._id = _id
+    public init(id: String? = nil, status: BlogPostContentStatus? = nil, title: String? = nil, spaceId: String? = nil, authorId: String? = nil, createdAt: Date? = nil, version: Version? = nil, body: BodyBulk? = nil, links: AbstractPageLinks? = nil) {
+        self.id = id
         self.status = status
         self.title = title
         self.spaceId = spaceId
@@ -39,7 +39,7 @@ public struct BlogPostBulk: Codable {
     }
 
     public enum CodingKeys: String, CodingKey { 
-        case _id = "id"
+        case id = "id"
         case status
         case title
         case spaceId
@@ -47,7 +47,7 @@ public struct BlogPostBulk: Codable {
         case createdAt
         case version
         case body
-        case links = "_links"
+        case links = "links"
     }
 
 }

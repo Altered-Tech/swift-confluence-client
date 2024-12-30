@@ -21,10 +21,6 @@ public struct BlogPostSingleLikes {
         self.links = links
     }
 
-    public enum CodingKeys: String, CodingKey { 
-        case links = "_links"
-    }
-
     internal init(client: Components.Schemas.PageSingle.likesPayload?) {
         self.results = client?.results?.map{ Like(client: $0) }
         self.meta = OptionalFieldMeta(client: client?.meta)

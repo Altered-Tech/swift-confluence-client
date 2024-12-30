@@ -9,10 +9,10 @@ import Foundation
 
 
 
-public struct DatabaseSingle: Codable {
+public struct DatabaseSingle {
 
     /** ID of the database. */
-    public var _id: String?
+    public var id: String?
     /** The content type of the object. */
     public var type: String?
     public var status: ContentStatus?
@@ -32,8 +32,8 @@ public struct DatabaseSingle: Codable {
     public var version: Version?
     public var links: DatabaseLinks?
 
-    public init(_id: String? = nil, type: String? = nil, status: ContentStatus? = nil, title: String? = nil, parentId: String? = nil, parentType: ParentContentType? = nil, position: Int? = nil, authorId: String? = nil, ownerId: String? = nil, createdAt: Date? = nil, version: Version? = nil, links: DatabaseLinks? = nil) {
-        self._id = _id
+    public init(id: String? = nil, type: String? = nil, status: ContentStatus? = nil, title: String? = nil, parentId: String? = nil, parentType: ParentContentType? = nil, position: Int? = nil, authorId: String? = nil, ownerId: String? = nil, createdAt: Date? = nil, version: Version? = nil, links: DatabaseLinks? = nil) {
+        self.id = id
         self.type = type
         self.status = status
         self.title = title
@@ -47,19 +47,5 @@ public struct DatabaseSingle: Codable {
         self.links = links
     }
 
-    public enum CodingKeys: String, CodingKey { 
-        case _id = "id"
-        case type
-        case status
-        case title
-        case parentId
-        case parentType
-        case position
-        case authorId
-        case ownerId
-        case createdAt
-        case version
-        case links = "_links"
-    }
 
 }

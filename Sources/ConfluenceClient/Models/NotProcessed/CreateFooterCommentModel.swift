@@ -9,7 +9,7 @@ import Foundation
 
 
 
-public struct CreateFooterCommentModel: Codable {
+public struct CreateFooterCommentModel {
 
     /** ID of the containing blog post, if intending to create a top level footer comment. Do not provide if creating a reply. */
     public var blogPostId: String?

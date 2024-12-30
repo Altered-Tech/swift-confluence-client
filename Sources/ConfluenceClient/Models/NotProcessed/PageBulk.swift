@@ -9,10 +9,10 @@ import Foundation
 
 
 
-public struct PageBulk: Codable {
+public struct PageBulk {
 
     /** ID of the page. */
-    public var _id: String?
+    public var id: String?
     public var status: ContentStatus?
     /** Title of the page. */
     public var title: String?
@@ -35,8 +35,8 @@ public struct PageBulk: Codable {
     public var body: BodyBulk?
     public var links: AbstractPageLinks?
 
-    public init(_id: String? = nil, status: ContentStatus? = nil, title: String? = nil, spaceId: String? = nil, parentId: String? = nil, parentType: ParentContentType? = nil, position: Int? = nil, authorId: String? = nil, ownerId: String? = nil, lastOwnerId: String? = nil, createdAt: Date? = nil, version: Version? = nil, body: BodyBulk? = nil, links: AbstractPageLinks? = nil) {
-        self._id = _id
+    public init(id: String? = nil, status: ContentStatus? = nil, title: String? = nil, spaceId: String? = nil, parentId: String? = nil, parentType: ParentContentType? = nil, position: Int? = nil, authorId: String? = nil, ownerId: String? = nil, lastOwnerId: String? = nil, createdAt: Date? = nil, version: Version? = nil, body: BodyBulk? = nil, links: AbstractPageLinks? = nil) {
+        self.id = id
         self.status = status
         self.title = title
         self.spaceId = spaceId
@@ -51,22 +51,4 @@ public struct PageBulk: Codable {
         self.body = body
         self.links = links
     }
-
-    public enum CodingKeys: String, CodingKey { 
-        case _id = "id"
-        case status
-        case title
-        case spaceId
-        case parentId
-        case parentType
-        case position
-        case authorId
-        case ownerId
-        case lastOwnerId
-        case createdAt
-        case version
-        case body
-        case links = "_links"
-    }
-
 }

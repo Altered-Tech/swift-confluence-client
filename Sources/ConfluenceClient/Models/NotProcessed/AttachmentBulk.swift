@@ -9,10 +9,10 @@ import Foundation
 
 
 
-public struct AttachmentBulk: Codable {
+public struct AttachmentBulk {
 
     /** ID of the attachment. */
-    public var _id: String?
+    public var id: String?
     public var status: ContentStatus?
     /** Title of the comment. */
     public var title: String?
@@ -30,7 +30,7 @@ public struct AttachmentBulk: Codable {
     public var mediaTypeDescription: String?
     /** Comment for the attachment. */
     public var comment: String?
-    /** File ID of the attachment. This is the ID referenced in &#x60;atlas_doc_format&#x60; bodies and is distinct from the attachment ID. */
+    /** File ID of the attachment. This is the ID referenced in &#x60;atlasdocformat&#x60; bodies and is distinct from the attachment ID. */
     public var fileId: String?
     /** File size of the attachment. */
     public var fileSize: Int64?
@@ -41,8 +41,8 @@ public struct AttachmentBulk: Codable {
     public var version: Version?
     public var links: AttachmentLinks?
 
-    public init(_id: String? = nil, status: ContentStatus? = nil, title: String? = nil, createdAt: Date? = nil, pageId: String? = nil, blogPostId: String? = nil, customContentId: String? = nil, mediaType: String? = nil, mediaTypeDescription: String? = nil, comment: String? = nil, fileId: String? = nil, fileSize: Int64? = nil, webuiLink: String? = nil, downloadLink: String? = nil, version: Version? = nil, links: AttachmentLinks? = nil) {
-        self._id = _id
+    public init(id: String? = nil, status: ContentStatus? = nil, title: String? = nil, createdAt: Date? = nil, pageId: String? = nil, blogPostId: String? = nil, customContentId: String? = nil, mediaType: String? = nil, mediaTypeDescription: String? = nil, comment: String? = nil, fileId: String? = nil, fileSize: Int64? = nil, webuiLink: String? = nil, downloadLink: String? = nil, version: Version? = nil, links: AttachmentLinks? = nil) {
+        self.id = id
         self.status = status
         self.title = title
         self.createdAt = createdAt
@@ -58,25 +58,6 @@ public struct AttachmentBulk: Codable {
         self.downloadLink = downloadLink
         self.version = version
         self.links = links
-    }
-
-    public enum CodingKeys: String, CodingKey { 
-        case _id = "id"
-        case status
-        case title
-        case createdAt
-        case pageId
-        case blogPostId
-        case customContentId
-        case mediaType
-        case mediaTypeDescription
-        case comment
-        case fileId
-        case fileSize
-        case webuiLink
-        case downloadLink
-        case version
-        case links = "_links"
     }
 
 }

@@ -13,7 +13,7 @@ public struct InlineResponse200 {
 
     public var links: FootercommentscommentidLinks?
     /** ID of the attachment. */
-    public var _id: String?
+    public var id: String?
     public var status: ContentStatus?
     /** Title of the comment. */
     public var title: String?
@@ -31,7 +31,7 @@ public struct InlineResponse200 {
     public var mediaTypeDescription: String?
     /** Comment for the attachment. */
     public var comment: String?
-    /** File ID of the attachment. This is the ID referenced in &#x60;atlas_doc_format&#x60; bodies and is distinct from the attachment ID. */
+    /** File ID of the attachment. This is the ID referenced in &#x60;atlasdocformat&#x60; bodies and is distinct from the attachment ID. */
     public var fileId: String?
     /** File size of the attachment. */
     public var fileSize: Int64?

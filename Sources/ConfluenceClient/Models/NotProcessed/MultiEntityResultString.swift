@@ -9,7 +9,7 @@ import Foundation
 
 
 
-public struct MultiEntityResultString: Codable {
+public struct MultiEntityResultString {
 
     public var results: [Like]?
     public var links: MultiEntityLinks?
@@ -17,11 +17,6 @@ public struct MultiEntityResultString: Codable {
     public init(results: [Like]? = nil, links: MultiEntityLinks? = nil) {
         self.results = results
         self.links = links
-    }
-
-    public enum CodingKeys: String, CodingKey { 
-        case results
-        case links = "_links"
     }
 
 }

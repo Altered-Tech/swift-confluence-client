@@ -9,7 +9,7 @@ import Foundation
 
 
 
-public struct SmartLinkLinks: Codable {
+public struct SmartLinkLinks {
 
     /** Web UI link of the content. */
     public var webui: String?

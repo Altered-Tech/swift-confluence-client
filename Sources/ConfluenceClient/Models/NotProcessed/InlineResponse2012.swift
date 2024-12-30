@@ -13,7 +13,7 @@ public struct InlineResponse2012 {
 
     public var links: FootercommentscommentidLinks?
     /** ID of the comment. */
-    public var _id: String?
+    public var id: String?
     public var status: ContentStatus?
     /** Title of the comment. */
     public var title: String?

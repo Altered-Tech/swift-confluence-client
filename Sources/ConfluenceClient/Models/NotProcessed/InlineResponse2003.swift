@@ -9,11 +9,11 @@ import Foundation
 
 
 
-public struct InlineResponse2003: Codable {
+public struct InlineResponse2003 {
 
     public var links: FootercommentscommentidLinks?
     /** ID of the whiteboard. */
-    public var _id: String?
+    public var id: String?
     /** The content type of the object. */
     public var type: String?
     public var status: ContentStatus?
@@ -32,9 +32,9 @@ public struct InlineResponse2003: Codable {
     public var createdAt: Date?
     public var version: Version?
 
-    public init(links: FootercommentscommentidLinks? = nil, _id: String? = nil, type: String? = nil, status: ContentStatus? = nil, title: String? = nil, parentId: String? = nil, parentType: ParentContentType? = nil, position: Int? = nil, authorId: String? = nil, ownerId: String? = nil, createdAt: Date? = nil, version: Version? = nil) {
+    public init(links: FootercommentscommentidLinks? = nil, id: String? = nil, type: String? = nil, status: ContentStatus? = nil, title: String? = nil, parentId: String? = nil, parentType: ParentContentType? = nil, position: Int? = nil, authorId: String? = nil, ownerId: String? = nil, createdAt: Date? = nil, version: Version? = nil) {
         self.links = links
-        self._id = _id
+        self.id = id
         self.type = type
         self.status = status
         self.title = title
@@ -45,21 +45,6 @@ public struct InlineResponse2003: Codable {
         self.ownerId = ownerId
         self.createdAt = createdAt
         self.version = version
-    }
-
-    public enum CodingKeys: String, CodingKey { 
-        case links = "_links"
-        case _id = "id"
-        case type
-        case status
-        case title
-        case parentId
-        case parentType
-        case position
-        case authorId
-        case ownerId
-        case createdAt
-        case version
     }
 
 }

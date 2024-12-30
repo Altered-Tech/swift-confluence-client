@@ -9,10 +9,10 @@ import Foundation
 
 
 
-public struct BlogPostCommentModel: Codable {
+public struct BlogPostCommentModel {
 
     /** ID of the comment. */
-    public var _id: String?
+    public var id: String?
     public var status: ContentStatus?
     /** Title of the comment. */
     public var title: String?
@@ -22,8 +22,8 @@ public struct BlogPostCommentModel: Codable {
     public var body: BodyBulk?
     public var links: CommentLinks?
 
-    public init(_id: String? = nil, status: ContentStatus? = nil, title: String? = nil, blogPostId: String? = nil, version: Version? = nil, body: BodyBulk? = nil, links: CommentLinks? = nil) {
-        self._id = _id
+    public init(id: String? = nil, status: ContentStatus? = nil, title: String? = nil, blogPostId: String? = nil, version: Version? = nil, body: BodyBulk? = nil, links: CommentLinks? = nil) {
+        self.id = id
         self.status = status
         self.title = title
         self.blogPostId = blogPostId
@@ -33,13 +33,13 @@ public struct BlogPostCommentModel: Codable {
     }
 
     public enum CodingKeys: String, CodingKey { 
-        case _id = "id"
+        case id = "id"
         case status
         case title
         case blogPostId
         case version
         case body
-        case links = "_links"
+        case links = "links"
     }
 
 }

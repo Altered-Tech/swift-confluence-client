@@ -10,7 +10,7 @@ import Foundation
 
 /** Body of the custom content. Only one body format should be specified as the property for this object, e.g. &#x60;storage&#x60;. */
 
-public struct CustomContentNestedBodyWrite: Codable {
+public struct CustomContentNestedBodyWrite {
 
     public var storage: CustomContentBodyWrite?
     public var atlasDocFormat: CustomContentBodyWrite?
@@ -24,7 +24,7 @@ public struct CustomContentNestedBodyWrite: Codable {
 
     public enum CodingKeys: String, CodingKey { 
         case storage
-        case atlasDocFormat = "atlas_doc_format"
+        case atlasDocFormat = "atlasdocformat"
         case raw
     }
 

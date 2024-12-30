@@ -9,24 +9,18 @@ import Foundation
 
 
 
-public struct VersionedEntity: Codable {
+public struct VersionedEntity {
 
     /** Title of the entity. */
     public var title: String?
     /** ID of the entity. */
-    public var _id: String?
+    public var id: String?
     public var body: BodyBulk?
 
-    public init(title: String? = nil, _id: String? = nil, body: BodyBulk? = nil) {
+    public init(title: String? = nil, id: String? = nil, body: BodyBulk? = nil) {
         self.title = title
-        self._id = _id
+        self.id = id
         self.body = body
-    }
-
-    public enum CodingKeys: String, CodingKey { 
-        case title
-        case _id = "id"
-        case body
     }
 
 }

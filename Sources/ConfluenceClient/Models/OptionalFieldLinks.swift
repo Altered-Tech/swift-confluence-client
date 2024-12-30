@@ -9,17 +9,13 @@ import Foundation
 
 
 
-public struct OptionalFieldLinks: Codable {
+public struct OptionalFieldLinks {
 
     /** A relative URL that can be used to fetch results beyond what this include parameter retrieves. */
     public var _self: String?
 
     public init(_self: String? = nil) {
         self._self = _self
-    }
-
-    public enum CodingKeys: String, CodingKey { 
-        case _self = "self"
     }
 
     internal init(client: Components.Schemas.OptionalFieldLinks?) {

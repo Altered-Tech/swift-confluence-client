@@ -10,7 +10,7 @@ import Foundation
 
 /** Contains fields for each representation type requested. */
 
-public struct TaskBodySingle: Codable {
+public struct TaskBodySingle {
 
     public var storage: BodyType?
     public var atlasDocFormat: BodyType?
@@ -18,11 +18,6 @@ public struct TaskBodySingle: Codable {
     public init(storage: BodyType? = nil, atlasDocFormat: BodyType? = nil) {
         self.storage = storage
         self.atlasDocFormat = atlasDocFormat
-    }
-
-    public enum CodingKeys: String, CodingKey { 
-        case storage
-        case atlasDocFormat = "atlas_doc_format"
     }
 
 }

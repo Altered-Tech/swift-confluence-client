@@ -9,7 +9,7 @@ import Foundation
 
 
 
-public struct MultiEntityResultLabel: Codable {
+public struct MultiEntityResultLabel {
 
     public var results: [Label]?
     public var links: MultiEntityLinks?
@@ -21,7 +21,7 @@ public struct MultiEntityResultLabel: Codable {
 
     public enum CodingKeys: String, CodingKey { 
         case results
-        case links = "_links"
+        case links = "links"
     }
 
 }

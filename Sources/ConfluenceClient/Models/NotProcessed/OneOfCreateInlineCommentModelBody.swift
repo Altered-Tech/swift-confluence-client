@@ -9,7 +9,7 @@ import Foundation
 
 
 
-public struct OneOfCreateInlineCommentModelBody: Codable {
+public struct OneOfCreateInlineCommentModelBody {
 
 
 

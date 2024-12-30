@@ -12,8 +12,8 @@ import Foundation
 public enum CustomContentBodyRepresentationSingle: String, Codable {
     case raw = "raw"
     case storage = "storage"
-    case atlasDocFormat = "atlas_doc_format"
+    case atlasDocFormat = "atlasdocformat"
     case view = "view"
-    case exportView = "export_view"
-    case anonymousExportView = "anonymous_export_view"
+    case exportView = "exportview"
+    case anonymousExportView = "anonymousexportview"
 }

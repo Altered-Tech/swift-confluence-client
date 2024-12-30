@@ -9,14 +9,14 @@ import Foundation
 
 
 
-public struct Task: Codable {
+public struct Task {
 
     public enum Status: String, Codable { 
         case complete = "complete"
         case incomplete = "incomplete"
     }
     /** ID of the task. */
-    public var _id: String?
+    public var id: String?
     /** Local ID of the task. This ID is local to the corresponding page or blog post. */
     public var localId: String?
     /** ID of the space the task is in. */
@@ -43,8 +43,8 @@ public struct Task: Codable {
     /** Date and time when the task was completed. In format \&quot;YYYY-MM-DDTHH:mm:ss.sssZ\&quot;. */
     public var completedAt: Date?
 
-    public init(_id: String? = nil, localId: String? = nil, spaceId: String? = nil, pageId: String? = nil, blogPostId: String? = nil, status: Status? = nil, body: TaskBodySingle? = nil, createdBy: String? = nil, assignedTo: String? = nil, completedBy: String? = nil, createdAt: Date? = nil, updatedAt: Date? = nil, dueAt: Date? = nil, completedAt: Date? = nil) {
-        self._id = _id
+    public init(id: String? = nil, localId: String? = nil, spaceId: String? = nil, pageId: String? = nil, blogPostId: String? = nil, status: Status? = nil, body: TaskBodySingle? = nil, createdBy: String? = nil, assignedTo: String? = nil, completedBy: String? = nil, createdAt: Date? = nil, updatedAt: Date? = nil, dueAt: Date? = nil, completedAt: Date? = nil) {
+        self.id = id
         self.localId = localId
         self.spaceId = spaceId
         self.pageId = pageId
@@ -58,23 +58,6 @@ public struct Task: Codable {
         self.updatedAt = updatedAt
         self.dueAt = dueAt
         self.completedAt = completedAt
-    }
-
-    public enum CodingKeys: String, CodingKey { 
-        case _id = "id"
-        case localId
-        case spaceId
-        case pageId
-        case blogPostId
-        case status
-        case body
-        case createdBy
-        case assignedTo
-        case completedBy
-        case createdAt
-        case updatedAt
-        case dueAt
-        case completedAt
     }
 
 }

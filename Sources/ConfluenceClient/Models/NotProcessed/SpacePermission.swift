@@ -9,23 +9,17 @@ import Foundation
 
 
 
-public struct SpacePermission: Codable {
+public struct SpacePermission {
 
     /** ID of the space permission. */
-    public var _id: String?
+    public var id: String?
     public var principal: SpacePermissionPrincipal?
     public var operation: SpacePermissionOperation?
 
-    public init(_id: String? = nil, principal: SpacePermissionPrincipal? = nil, operation: SpacePermissionOperation? = nil) {
-        self._id = _id
+    public init(id: String? = nil, principal: SpacePermissionPrincipal? = nil, operation: SpacePermissionOperation? = nil) {
+        self.id = id
         self.principal = principal
         self.operation = operation
-    }
-
-    public enum CodingKeys: String, CodingKey { 
-        case _id = "id"
-        case principal
-        case operation
     }
 
 }

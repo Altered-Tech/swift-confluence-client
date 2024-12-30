@@ -9,7 +9,7 @@ import Foundation
 
 
 
-public struct MultiEntityResultAttachmentCommentModel: Codable {
+public struct MultiEntityResultAttachmentCommentModel {
 
     public var results: [AttachmentCommentModel]?
     public var links: MultiEntityLinks?
@@ -21,7 +21,7 @@ public struct MultiEntityResultAttachmentCommentModel: Codable {
 
     public enum CodingKeys: String, CodingKey { 
         case results
-        case links = "_links"
+        case links = "links"
     }
 
 }

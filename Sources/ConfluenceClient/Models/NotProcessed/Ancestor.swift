@@ -9,19 +9,19 @@ import Foundation
 
 
 
-public struct Ancestor: Codable {
+public struct Ancestor {
 
     /** ID of the ancestor */
-    public var _id: String?
+    public var id: String?
     public var type: AncestorType?
 
-    public init(_id: String? = nil, type: AncestorType? = nil) {
-        self._id = _id
+    public init(id: String? = nil, type: AncestorType? = nil) {
+        self.id = id
         self.type = type
     }
 
     public enum CodingKeys: String, CodingKey { 
-        case _id = "id"
+        case id = "id"
         case type
     }
 

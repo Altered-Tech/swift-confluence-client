@@ -9,7 +9,7 @@ import Foundation
 
 
 
-public struct FootercommentscommentidLinks: Codable {
+public struct FootercommentscommentidLinks {
 
     /** Base url of the Confluence site. */
     public var base: String?

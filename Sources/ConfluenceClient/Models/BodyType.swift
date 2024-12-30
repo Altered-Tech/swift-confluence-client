@@ -9,7 +9,7 @@ import Foundation
 
 
 
-public struct BodyType: Codable {
+public struct BodyType {
 
     /** Type of content representation used for the value field. */
     public var representation: String?

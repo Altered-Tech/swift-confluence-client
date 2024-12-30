@@ -9,7 +9,7 @@ import Foundation
 
 
 
-public struct UpdateFooterCommentModelVersion: Codable {
+public struct UpdateFooterCommentModelVersion {
 
     /** Number of new version. Should be 1 higher than current version of the comment. */
     public var number: Int?

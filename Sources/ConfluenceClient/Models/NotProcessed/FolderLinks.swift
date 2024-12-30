@@ -9,7 +9,7 @@ import Foundation
 
 
 
-public struct FolderLinks: Codable {
+public struct FolderLinks {
 
     /** Web UI link of the content. */
     public var webui: String?

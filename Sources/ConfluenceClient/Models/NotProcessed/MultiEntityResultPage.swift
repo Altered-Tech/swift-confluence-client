@@ -9,7 +9,7 @@ import Foundation
 
 
 
-public struct MultiEntityResultPage: Codable {
+public struct MultiEntityResultPage {
 
     public var results: [PageBulk]?
     public var links: MultiEntityLinks?
@@ -21,7 +21,7 @@ public struct MultiEntityResultPage: Codable {
 
     public enum CodingKeys: String, CodingKey { 
         case results
-        case links = "_links"
+        case links = "links"
     }
 
 }

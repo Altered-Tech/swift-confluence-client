@@ -9,11 +9,11 @@ import Foundation
 
 
 
-public struct OptionalFieldMeta: Codable {
+public struct OptionalFieldMeta {
 
     /** Indicates if there are more available results that can be fetched. */
     public var hasMore: Bool?
-    /** A token that can be used in the query parameter of the endpoint returned in the &#x60;_links&#x60; property to retrieve the next set of results. */
+    /** A token that can be used in the query parameter of the endpoint returned in the &#x60;links&#x60; property to retrieve the next set of results. */
     public var cursor: String?
 
     public init(hasMore: Bool? = nil, cursor: String? = nil) {

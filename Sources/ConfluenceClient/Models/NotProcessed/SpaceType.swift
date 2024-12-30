@@ -12,6 +12,6 @@ import Foundation
 public enum SpaceType: String, Codable {
     case global = "global"
     case collaboration = "collaboration"
-    case knowledgeBase = "knowledge_base"
+    case knowledgeBase = "knowledgebase"
     case personal = "personal"
 }

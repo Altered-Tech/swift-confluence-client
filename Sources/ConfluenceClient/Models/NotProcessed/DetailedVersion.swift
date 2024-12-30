@@ -9,7 +9,7 @@ import Foundation
 
 
 
-public struct DetailedVersion: Codable {
+public struct DetailedVersion {
 
     /** The current version number. */
     public var number: Int?

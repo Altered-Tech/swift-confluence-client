@@ -9,7 +9,7 @@ import Foundation
 
 
 
-public struct MultiEntityResultCustomContent: Codable {
+public struct MultiEntityResultCustomContent {
 
     public var results: [CustomContentBulk]?
     public var links: MultiEntityLinks?
@@ -21,7 +21,7 @@ public struct MultiEntityResultCustomContent: Codable {
 
     public enum CodingKeys: String, CodingKey { 
         case results
-        case links = "_links"
+        case links = "links"
     }
 
 }

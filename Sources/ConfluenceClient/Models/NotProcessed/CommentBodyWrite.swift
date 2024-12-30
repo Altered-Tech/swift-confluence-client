@@ -9,11 +9,11 @@ import Foundation
 
 
 
-public struct CommentBodyWrite: Codable {
+public struct CommentBodyWrite {
 
     public enum Representation: String, Codable { 
         case storage = "storage"
-        case atlasDocFormat = "atlas_doc_format"
+        case atlasDocFormat = "atlasdocformat"
         case wiki = "wiki"
     }
     /** Type of content representation used for the value field. */

@@ -10,7 +10,7 @@ import Foundation
 
 /** Body of the comment. Only one body format should be specified as the property for this object, e.g. &#x60;storage&#x60;. */
 
-public struct CommentNestedBodyWrite: Codable {
+public struct CommentNestedBodyWrite {
 
     public var storage: CommentBodyWrite?
     public var atlasDocFormat: CommentBodyWrite?
@@ -24,7 +24,7 @@ public struct CommentNestedBodyWrite: Codable {
 
     public enum CodingKeys: String, CodingKey { 
         case storage
-        case atlasDocFormat = "atlas_doc_format"
+        case atlasDocFormat = "atlasdocformat"
         case wiki
     }
 

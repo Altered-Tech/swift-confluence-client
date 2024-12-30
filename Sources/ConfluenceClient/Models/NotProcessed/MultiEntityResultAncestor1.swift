@@ -9,7 +9,7 @@ import Foundation
 
 
 
-public struct MultiEntityResultAncestor1: Codable {
+public struct MultiEntityResultAncestor1 {
 
     public var results: [Ancestor]?
     public var links: MultiEntityLinks?
@@ -21,7 +21,7 @@ public struct MultiEntityResultAncestor1: Codable {
 
     public enum CodingKeys: String, CodingKey { 
         case results
-        case links = "_links"
+        case links = "links"
     }
 
 }

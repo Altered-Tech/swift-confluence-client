@@ -10,7 +10,7 @@ import Foundation
 
 /** The operation the space permission corresponds to. */
 
-public struct SpacePermissionOperation: Codable {
+public struct SpacePermissionOperation {
 
     public enum Key: String, Codable { 
         case use = "use"
@@ -22,11 +22,11 @@ public struct SpacePermissionOperation: Codable {
         case move = "move"
         case export = "export"
         case purge = "purge"
-        case purgeVersion = "purge_version"
+        case purgeVersion = "purgeversion"
         case administer = "administer"
         case restore = "restore"
-        case createSpace = "create_space"
-        case restrictContent = "restrict_content"
+        case createSpace = "createspace"
+        case restrictContent = "restrictcontent"
         case archive = "archive"
     }
     public enum TargetType: String, Codable { 

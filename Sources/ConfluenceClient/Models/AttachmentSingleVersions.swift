@@ -9,7 +9,7 @@ import Foundation
 
 
 
-public struct AttachmentSingleVersions: Codable {
+public struct AttachmentSingleVersions {
 
     public var results: [Version]?
     public var meta: OptionalFieldMeta?
@@ -19,12 +19,6 @@ public struct AttachmentSingleVersions: Codable {
         self.results = results
         self.meta = meta
         self.links = links
-    }
-
-    public enum CodingKeys: String, CodingKey { 
-        case results
-        case meta
-        case links = "_links"
     }
     
     internal init(client: Components.Schemas.PageSingle.versionsPayload?) {

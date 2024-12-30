@@ -9,7 +9,7 @@ import Foundation
 
 
 
-public struct DataPolicySpaceDataPolicy: Codable {
+public struct DataPolicySpaceDataPolicy {
 
     /** Whether the space contains any content blocked for (inaccessible to) the requesting client application. */
     public var anyContentBlocked: Bool?

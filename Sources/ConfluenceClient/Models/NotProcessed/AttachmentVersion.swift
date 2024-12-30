@@ -9,7 +9,7 @@ import Foundation
 
 
 
-public struct AttachmentVersion: Codable {
+public struct AttachmentVersion {
 
     /** Date and time when the version was created. In format \&quot;YYYY-MM-DDTHH:mm:ss.sssZ\&quot;. */
     public var createdAt: Date?

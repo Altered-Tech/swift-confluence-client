@@ -9,7 +9,7 @@ import Foundation
 
 
 
-public struct MultiEntityResultAncestor: Codable {
+public struct MultiEntityResultAncestor {
 
     public var results: [Ancestor]?
 

@@ -12,7 +12,7 @@ import Foundation
 public struct SpaceProperty {
 
     /** ID of the space property. */
-    public var _id: String?
+    public var id: String?
     /** Key of the space property. */
     public var key: String?
     /** Value of the space property. */
@@ -23,8 +23,8 @@ public struct SpaceProperty {
     public var createdBy: String?
     public var version: SpacePropertyVersion?
 
-    public init(_id: String? = nil, key: String? = nil, value: Any? = nil, createdAt: Date? = nil, createdBy: String? = nil, version: SpacePropertyVersion? = nil) {
-        self._id = _id
+    public init(id: String? = nil, key: String? = nil, value: Any? = nil, createdAt: Date? = nil, createdBy: String? = nil, version: SpacePropertyVersion? = nil) {
+        self.id = id
         self.key = key
         self.value = value
         self.createdAt = createdAt

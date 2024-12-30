@@ -9,7 +9,7 @@ import Foundation
 
 
 
-public struct Integer: Codable {
+public struct Integer {
 
     /** The count number */
     public var count: Int64?

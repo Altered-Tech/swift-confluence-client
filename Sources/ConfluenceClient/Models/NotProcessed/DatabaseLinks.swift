@@ -9,7 +9,7 @@ import Foundation
 
 
 
-public struct DatabaseLinks: Codable {
+public struct DatabaseLinks {
 
     /** Web UI link of the content. */
     public var webui: String?

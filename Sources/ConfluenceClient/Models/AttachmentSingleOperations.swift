@@ -21,9 +21,6 @@ public struct AttachmentSingleOperations {
         self.links = links
     }
 
-    public enum CodingKeys: String, CodingKey {
-        case links = "_links"
-    }
 
     internal init(client: Components.Schemas.PageSingle.operationsPayload?) {
         self.results = client?.results?.map{ Operation(client: $0) }

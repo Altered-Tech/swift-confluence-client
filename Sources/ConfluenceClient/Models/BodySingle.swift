@@ -10,7 +10,7 @@ import Foundation
 
 /** Contains fields for each representation type requested. */
 
-public struct BodySingle: Codable {
+public struct BodySingle {
 
     public var storage: BodyType?
     public var atlasDocFormat: BodyType?
@@ -20,12 +20,6 @@ public struct BodySingle: Codable {
         self.storage = storage
         self.atlasDocFormat = atlasDocFormat
         self.view = view
-    }
-
-    public enum CodingKeys: String, CodingKey { 
-        case storage
-        case atlasDocFormat = "atlas_doc_format"
-        case view
     }
     
     internal init(client: Components.Schemas.BodySingle?) {

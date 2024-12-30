@@ -10,7 +10,7 @@ import Foundation
 
 /** New version number and associated message */
 
-public struct ContentPropertyUpdateRequestVersion: Codable {
+public struct ContentPropertyUpdateRequestVersion {
 
     /** Version number of the new version. Should be 1 more than the current version number. */
     public var number: Int?

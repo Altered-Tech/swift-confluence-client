@@ -9,7 +9,7 @@ import Foundation
 
 
 
-public struct WhiteboardLinks: Codable {
+public struct WhiteboardLinks {
 
     /** Web UI link of the content. */
     public var webui: String?

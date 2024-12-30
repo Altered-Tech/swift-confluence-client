@@ -9,7 +9,7 @@ import Foundation
 
 
 
-public struct Label: Codable {
+public struct Label {
 
     /** ID of the label. */
     public var id: String?

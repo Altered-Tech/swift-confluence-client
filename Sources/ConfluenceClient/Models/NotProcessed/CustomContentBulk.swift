@@ -9,10 +9,10 @@ import Foundation
 
 
 
-public struct CustomContentBulk: Codable {
+public struct CustomContentBulk {
 
     /** ID of the custom content. */
-    public var _id: String?
+    public var id: String?
     /** The type of custom content. */
     public var type: String?
     public var status: ContentStatus?
@@ -34,8 +34,8 @@ public struct CustomContentBulk: Codable {
     public var body: CustomContentBodyBulk?
     public var links: CustomContentLinks?
 
-    public init(_id: String? = nil, type: String? = nil, status: ContentStatus? = nil, title: String? = nil, spaceId: String? = nil, pageId: String? = nil, blogPostId: String? = nil, customContentId: String? = nil, authorId: String? = nil, createdAt: Date? = nil, version: Version? = nil, body: CustomContentBodyBulk? = nil, links: CustomContentLinks? = nil) {
-        self._id = _id
+    public init(id: String? = nil, type: String? = nil, status: ContentStatus? = nil, title: String? = nil, spaceId: String? = nil, pageId: String? = nil, blogPostId: String? = nil, customContentId: String? = nil, authorId: String? = nil, createdAt: Date? = nil, version: Version? = nil, body: CustomContentBodyBulk? = nil, links: CustomContentLinks? = nil) {
+        self.id = id
         self.type = type
         self.status = status
         self.title = title
@@ -48,22 +48,6 @@ public struct CustomContentBulk: Codable {
         self.version = version
         self.body = body
         self.links = links
-    }
-
-    public enum CodingKeys: String, CodingKey { 
-        case _id = "id"
-        case type
-        case status
-        case title
-        case spaceId
-        case pageId
-        case blogPostId
-        case customContentId
-        case authorId
-        case createdAt
-        case version
-        case body
-        case links = "_links"
     }
 
 }

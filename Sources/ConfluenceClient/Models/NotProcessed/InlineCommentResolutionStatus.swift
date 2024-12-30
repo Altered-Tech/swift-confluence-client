@@ -10,7 +10,7 @@ import Foundation
 
 /** Inline comment resolution status */
 public enum InlineCommentResolutionStatus: String, Codable {
-    case _open = "open"
+    case open = "open"
     case reopened = "reopened"
     case resolved = "resolved"
     case dangling = "dangling"

@@ -10,7 +10,7 @@ import Foundation
 
 /** Object describing the text to highlight on the page/blog post. Only applicable for top level inline comments (not replies) and required in that case. */
 
-public struct CreateInlineCommentModelInlineCommentProperties: Codable {
+public struct CreateInlineCommentModelInlineCommentProperties {
 
     /** The text to highlight */
     public var textSelection: String?

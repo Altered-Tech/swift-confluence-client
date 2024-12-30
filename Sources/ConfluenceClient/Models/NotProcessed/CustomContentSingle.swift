@@ -12,7 +12,7 @@ import Foundation
 public struct CustomContentSingle {
 
     /** ID of the custom content. */
-    public var _id: String?
+    public var id: String?
     /** The type of custom content. */
     public var type: String?
     public var status: ContentStatus?

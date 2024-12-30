@@ -10,7 +10,7 @@ import Foundation
 
 /** Body of the blog post. Only one body format should be specified as the property for this object, e.g. &#x60;storage&#x60;. */
 
-public struct BlogPostNestedBodyWrite: Codable {
+public struct BlogPostNestedBodyWrite {
 
     public var storage: BlogPostBodyWrite?
     public var atlasDocFormat: BlogPostBodyWrite?
@@ -24,7 +24,7 @@ public struct BlogPostNestedBodyWrite: Codable {
 
     public enum CodingKeys: String, CodingKey { 
         case storage
-        case atlasDocFormat = "atlas_doc_format"
+        case atlasDocFormat = "atlasdocformat"
         case wiki
     }
 

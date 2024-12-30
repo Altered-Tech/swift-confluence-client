@@ -9,7 +9,7 @@ import Foundation
 
 
 
-public struct Like: Codable {
+public struct Like {
 
     /** Account ID. */
     public var accountId: String?

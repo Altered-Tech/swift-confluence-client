@@ -9,7 +9,7 @@ import Foundation
 
 
 
-public struct OneOfUpdateFooterCommentModelBody: Codable {
+public struct OneOfUpdateFooterCommentModelBody {
 
 
 

@@ -11,10 +11,10 @@ import Foundation
 /** The primary formats a body can be represented as. A subset of BodyRepresentation. These formats are the only allowed formats in certain use cases. */
 public enum PrimaryBodyRepresentationSingle: String, Codable {
     case storage = "storage"
-    case atlasDocFormat = "atlas_doc_format"
+    case atlasDocFormat = "atlasdocformat"
     case view = "view"
-    case exportView = "export_view"
-    case anonymousExportView = "anonymous_export_view"
-    case styledView = "styled_view"
+    case exportView = "exportview"
+    case anonymousExportView = "anonymousexportview"
+    case styledView = "styledview"
     case editor = "editor"
 }

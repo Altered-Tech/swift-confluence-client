@@ -9,7 +9,7 @@ import Foundation
 
 
 
-public struct SpaceLinks: Codable {
+public struct SpaceLinks {
 
     /** Web UI link of the space. */
     public var webui: String?

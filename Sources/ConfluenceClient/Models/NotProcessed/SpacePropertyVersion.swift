@@ -9,7 +9,7 @@ import Foundation
 
 
 
-public struct SpacePropertyVersion: Codable {
+public struct SpacePropertyVersion {
 
     /** RFC3339 compliant date time at which the property&#x27;s current version was created. */
     public var createdAt: Date?

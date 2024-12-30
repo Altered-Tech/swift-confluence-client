@@ -10,7 +10,7 @@ import Foundation
 
 /** The entity the space permissions corresponds to. */
 
-public struct SpacePermissionPrincipal: Codable {
+public struct SpacePermissionPrincipal {
 
     public enum ModelType: String, Codable { 
         case user = "user"
@@ -19,16 +19,16 @@ public struct SpacePermissionPrincipal: Codable {
     }
     public var type: ModelType?
     /** ID of the entity. */
-    public var _id: String?
+    public var id: String?
 
-    public init(type: ModelType? = nil, _id: String? = nil) {
+    public init(type: ModelType? = nil, id: String? = nil) {
         self.type = type
-        self._id = _id
+        self.id = id
     }
 
     public enum CodingKeys: String, CodingKey { 
         case type
-        case _id = "id"
+        case id = "id"
     }
 
 }

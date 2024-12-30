@@ -12,5 +12,5 @@ import Foundation
 public enum CustomContentBodyRepresentation: String, Codable {
     case raw = "raw"
     case storage = "storage"
-    case atlasDocFormat = "atlas_doc_format"
+    case atlasDocFormat = "atlasdocformat"
 }

@@ -9,10 +9,10 @@ import Foundation
 
 
 
-public struct SpaceBulk: Codable {
+public struct SpaceBulk {
 
     /** ID of the space. */
-    public var _id: String?
+    public var id: String?
     /** Key of the space. */
     public var key: String?
     /** Name of the space. */
@@ -25,12 +25,12 @@ public struct SpaceBulk: Codable {
     public var createdAt: Date?
     /** ID of the space&#x27;s homepage. */
     public var homepageId: String?
-    public var _description: SpaceDescription?
+    public var description: SpaceDescription?
     public var icon: SpaceIcon?
     public var links: SpaceLinks?
 
-    public init(_id: String? = nil, key: String? = nil, name: String? = nil, type: SpaceType? = nil, status: SpaceStatus? = nil, authorId: String? = nil, createdAt: Date? = nil, homepageId: String? = nil, _description: SpaceDescription? = nil, icon: SpaceIcon? = nil, links: SpaceLinks? = nil) {
-        self._id = _id
+    public init(id: String? = nil, key: String? = nil, name: String? = nil, type: SpaceType? = nil, status: SpaceStatus? = nil, authorId: String? = nil, createdAt: Date? = nil, homepageId: String? = nil, description: SpaceDescription? = nil, icon: SpaceIcon? = nil, links: SpaceLinks? = nil) {
+        self.id = id
         self.key = key
         self.name = name
         self.type = type
@@ -38,23 +38,9 @@ public struct SpaceBulk: Codable {
         self.authorId = authorId
         self.createdAt = createdAt
         self.homepageId = homepageId
-        self._description = _description
+        self.description = description
         self.icon = icon
         self.links = links
-    }
-
-    public enum CodingKeys: String, CodingKey { 
-        case _id = "id"
-        case key
-        case name
-        case type
-        case status
-        case authorId
-        case createdAt
-        case homepageId
-        case _description = "description"
-        case icon
-        case links = "_links"
     }
 
 }

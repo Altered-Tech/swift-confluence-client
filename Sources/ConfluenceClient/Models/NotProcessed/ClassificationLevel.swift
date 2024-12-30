@@ -10,39 +10,29 @@ import Foundation
 
 /** A unit of [data classification](https://support.atlassian.com/security-and-access-policies/docs/what-is-data-classification/) defined by an organiation.  A classification level may be associated with specific storage and handling requirements or expectations. */
 
-public struct ClassificationLevel: Codable {
+public struct ClassificationLevel {
 
     /** The ID of the classification level. */
-    public var _id: String?
+    public var id: String?
     public var status: ClassificationLevelStatus?
     /** The order of the classification level object. */
     public var order: Decimal?
     /** The name of the classification level object. */
     public var name: String?
     /** The description of the classification level object. */
-    public var _description: String?
+    public var description: String?
     /** The guideline of the classification level object. */
     public var guideline: String?
     public var color: ClassificationLevelColor?
 
-    public init(_id: String? = nil, status: ClassificationLevelStatus? = nil, order: Decimal? = nil, name: String? = nil, _description: String? = nil, guideline: String? = nil, color: ClassificationLevelColor? = nil) {
-        self._id = _id
+    public init(id: String? = nil, status: ClassificationLevelStatus? = nil, order: Decimal? = nil, name: String? = nil, description: String? = nil, guideline: String? = nil, color: ClassificationLevelColor? = nil) {
+        self.id = id
         self.status = status
         self.order = order
         self.name = name
-        self._description = _description
+        self.description = description
         self.guideline = guideline
         self.color = color
-    }
-
-    public enum CodingKeys: String, CodingKey { 
-        case _id = "id"
-        case status
-        case order
-        case name
-        case _description = "description"
-        case guideline
-        case color
     }
 
 }

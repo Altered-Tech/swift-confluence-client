@@ -9,7 +9,7 @@ import Foundation
 
 
 
-public struct BlogPostVersion: Codable {
+public struct BlogPostVersion {
 
     /** Date and time when the version was created. In format \&quot;YYYY-MM-DDTHH:mm:ss.sssZ\&quot;. */
     public var createdAt: Date?

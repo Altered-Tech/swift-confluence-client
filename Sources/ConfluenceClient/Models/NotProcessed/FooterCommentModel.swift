@@ -12,7 +12,7 @@ import Foundation
 public struct FooterCommentModel {
 
     /** ID of the comment. */
-    public var _id: String?
+    public var id: String?
     public var status: ContentStatus?
     /** Title of the comment. */
     public var title: String?

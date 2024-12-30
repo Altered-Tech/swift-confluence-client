@@ -9,11 +9,11 @@ import Foundation
 
 
 
-public struct CustomContentBodyWrite: Codable {
+public struct CustomContentBodyWrite {
 
     public enum Representation: String, Codable { 
         case storage = "storage"
-        case atlasDocFormat = "atlas_doc_format"
+        case atlasDocFormat = "atlasdocformat"
         case raw = "raw"
     }
     /** Type of content representation used for the value field. */

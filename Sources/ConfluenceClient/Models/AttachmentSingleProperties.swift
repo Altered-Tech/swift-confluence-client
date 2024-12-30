@@ -21,10 +21,6 @@ public struct AttachmentSingleProperties {
         self.links = links
     }
 
-    public enum CodingKeys: String, CodingKey {
-        case links = "_links"
-    }
-
     internal init(client: Components.Schemas.PageSingle.propertiesPayload?) {
         self.results = client?.results?.map{ ContentProperty(client: $0) }
         self.meta = OptionalFieldMeta(client: client?.meta)

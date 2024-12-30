@@ -10,7 +10,7 @@ import Foundation
 
 /** The icon of the space */
 
-public struct SpaceIcon: Codable {
+public struct SpaceIcon {
 
     /** The path (relative to base URL) at which the space&#x27;s icon can be retrieved. The format should be like &#x60;/wiki/download/...&#x60; or &#x60;/wiki/aa-avatar/...&#x60; */
     public var path: String?

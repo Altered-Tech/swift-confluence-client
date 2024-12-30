@@ -12,7 +12,7 @@ import Foundation
 public struct SpaceSingle {
 
     /** ID of the space. */
-    public var _id: String?
+    public var id: String?
     /** Key of the space. */
     public var key: String?
     /** Name of the space. */
@@ -25,7 +25,7 @@ public struct SpaceSingle {
     public var createdAt: Date?
     /** ID of the space&#x27;s homepage. */
     public var homepageId: String?
-    public var _description: SpaceDescription?
+    public var description: SpaceDescription?
     public var icon: SpaceIcon?
     public var labels: AttachmentSingleLabels?
     public var properties: SpaceSingleProperties?

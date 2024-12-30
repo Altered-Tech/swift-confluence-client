@@ -9,7 +9,7 @@ import Foundation
 
 
 
-public struct SpaceSinglePermissions: Codable {
+public struct SpaceSinglePermissions {
 
     public var results: [SpacePermission]?
     public var meta: OptionalFieldMeta?
@@ -19,12 +19,6 @@ public struct SpaceSinglePermissions: Codable {
         self.results = results
         self.meta = meta
         self.links = links
-    }
-
-    public enum CodingKeys: String, CodingKey { 
-        case results
-        case meta
-        case links = "_links"
     }
 
 }

@@ -21,7 +21,7 @@ public struct MultiEntityResultChildPage {
 
     public enum CodingKeys: String, CodingKey { 
         case results
-        case links = "_links"
+        case links = "links"
     }
 
 }

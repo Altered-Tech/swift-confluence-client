@@ -9,7 +9,7 @@ import Foundation
 
 
 
-public struct InlineResponse2008: Codable {
+public struct InlineResponse2008 {
 
     /** List of emails that do not have access to site. */
     public var emailsWithoutAccess: [String]?

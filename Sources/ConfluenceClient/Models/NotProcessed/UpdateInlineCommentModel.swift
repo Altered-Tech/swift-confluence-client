@@ -9,7 +9,7 @@ import Foundation
 
 
 
-public struct UpdateInlineCommentModel: Codable {
+public struct UpdateInlineCommentModel {
 
     public var version: UpdateFooterCommentModelVersion?
     public var body: OneOfUpdateInlineCommentModelBody?

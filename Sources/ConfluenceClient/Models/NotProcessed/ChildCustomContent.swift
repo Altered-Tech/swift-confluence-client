@@ -12,7 +12,7 @@ import Foundation
 public struct ChildCustomContent {
 
     /** ID of the child custom content. */
-    public var _id: String?
+    public var id: String?
     public var status: OnlyArchivedAndCurrentContentStatus?
     /** Title of the custom content. */
     public var title: String?

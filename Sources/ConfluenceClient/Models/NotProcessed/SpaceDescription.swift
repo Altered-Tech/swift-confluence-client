@@ -10,7 +10,7 @@ import Foundation
 
 /** Contains fields for each representation type requested. */
 
-public struct SpaceDescription: Codable {
+public struct SpaceDescription {
 
     public var plain: BodyType?
     public var view: BodyType?

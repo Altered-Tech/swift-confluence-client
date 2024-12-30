@@ -10,7 +10,7 @@ import Foundation
 
 /** Body of the page. Only one body format should be specified as the property for this object, e.g. &#x60;storage&#x60;. */
 
-public struct PageNestedBodyWrite: Codable {
+public struct PageNestedBodyWrite {
 
     public var storage: PageBodyWrite?
     public var atlasDocFormat: PageBodyWrite?
@@ -20,12 +20,6 @@ public struct PageNestedBodyWrite: Codable {
         self.storage = storage
         self.atlasDocFormat = atlasDocFormat
         self.wiki = wiki
-    }
-
-    public enum CodingKeys: String, CodingKey { 
-        case storage
-        case atlasDocFormat = "atlas_doc_format"
-        case wiki
     }
 
 }

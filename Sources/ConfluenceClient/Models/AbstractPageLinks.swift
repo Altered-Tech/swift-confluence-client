@@ -9,7 +9,7 @@ import Foundation
 
 
 
-public struct AbstractPageLinks: Codable {
+public struct AbstractPageLinks {
 
     /** Web UI link of the content. */
     public var webui: String?

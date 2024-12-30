@@ -9,7 +9,7 @@ import Foundation
 
 
 
-public struct AttachmentSingleLabels: Codable {
+public struct AttachmentSingleLabels {
     
     public var results: [Label]?
     public var meta: OptionalFieldMeta?

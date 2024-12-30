@@ -9,7 +9,7 @@ import Foundation
 
 
 
-public struct AttachmentLinks: Codable {
+public struct AttachmentLinks {
 
     /** Web UI link of the content. */
     public var webui: String?

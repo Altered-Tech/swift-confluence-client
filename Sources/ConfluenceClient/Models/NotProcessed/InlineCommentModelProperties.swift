@@ -23,12 +23,4 @@ public struct InlineCommentModelProperties {
     /** Deprecated, use &#x60;inlineOriginalSelection&#x60; instead. */
 //    public var inlineOriginalSelection: String?
 
-    public enum CodingKeys: String, CodingKey { 
-        case results
-        case meta
-        case links = "_links"
-        case inlineMarkerRef = "inline-marker-ref"
-        case inlineOriginalSelection = "inline-original-selection"
-    }
-
 }

@@ -10,7 +10,7 @@ import Foundation
 
 public enum ClassificationLevelColor: String, Codable {
     case red = "RED"
-    case redBold = "RED_BOLD"
+    case redBold = "REDBOLD"
     case orange = "ORANGE"
     case yellow = "YELLOW"
     case green = "GREEN"
